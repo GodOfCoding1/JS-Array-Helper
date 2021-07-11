@@ -135,7 +135,7 @@ function NextMenu({ action }) {
   }, [action]);
 
   return (
-    <div>
+    <div style={{ marginTop: "10px" }}>
       <Typography component={"span"} variant="body1" gutterBottom>
         {data.actionText}{" "}
         <Select

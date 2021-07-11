@@ -2,14 +2,11 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
-import Add from "./components/add";
-import Order from "./components/order";
-import Remove from "./components/remove";
-import Walk from "./components/walk";
-import String from "./components/string";
+import NextMenu from "./components/component";
 
 function App() {
   const [Action, setAction] = React.useState("");
+  const menu = React.useRef(null);
 
   return (
     <div style={{ marginTop: "30px", marginLeft: "30px" }}>
@@ -19,9 +16,10 @@ function App() {
       <Typography variant="body1" gutterBottom style={{ color: "#FF6666" }}>
         Find the array method you need without digging through the docs
       </Typography>
-      <Typography variant="body1" gutterBottom>
+      <Typography component={"span"} variant="body1" gutterBottom>
         I have an array, I would like to{" "}
         <Select
+          ref={menu}
           style={{ backgroundColor: "white", paddingInline: "10px" }}
           value={Action}
           onChange={(event) => {
@@ -38,19 +36,8 @@ function App() {
           <MenuItem value={"string"}>Return a string</MenuItem>
         </Select>
       </Typography>
-      {Action === "add" ? (
-        <Add />
-      ) : Action === "remove" ? (
-        <Remove />
-      ) : Action === "string" ? (
-        <String />
-      ) : Action === "order" ? (
-        <Order />
-      ) : Action === "walk" ? (
-        <Walk />
-      ) : (
-        ""
-      )}
+      <br />
+      {Action !== "" ? <NextMenu action={Action} /> : ""}
     </div>
   );
 }

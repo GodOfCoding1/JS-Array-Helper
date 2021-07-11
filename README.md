@@ -1,4 +1,4 @@
-# deployed link - https://array-helper.herokuapp.com/
+# Deployed link - https://array-helper.herokuapp.com/
 
 ### Clone of https://github.com/sdras/array-explorer
 

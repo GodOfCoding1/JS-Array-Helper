@@ -1,4 +1,6 @@
-#deployed link - https://array-helper.herokuapp.com/
+# deployed link - https://array-helper.herokuapp.com/
+
+### Clone of https://github.com/sdras/array-explorer
 
 # Getting Started with Create React App
 

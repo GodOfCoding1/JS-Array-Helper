@@ -155,6 +155,7 @@ function NextMenu({ action }) {
           ))}
         </Select>
       </Typography>
+      <br />
       {index !== "" ? (
         <Container
           maxWidth="sm"
